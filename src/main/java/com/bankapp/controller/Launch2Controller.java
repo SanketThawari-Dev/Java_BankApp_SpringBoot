@@ -38,16 +38,18 @@ public class Launch2Controller {
             if ("exits".equals(res)) {
                 session.setAttribute("check", uid);
                 session.setAttribute("ac", account);
-                return "redirect:/account.jsp";
+
+                // ✅ redirect to controller, NOT JSP
+                return "redirect:/account";
             } else {
                 session.setAttribute("msg", "Invalid Userid or password");
-                return "redirect:/login.jsp";
+                return "redirect:/login";
             }
 
         } catch (Exception e) {
             e.printStackTrace();
             req.getSession().setAttribute("msg", "Internal server error");
-            return "redirect:/login.jsp";
+            return "redirect:/login";
         }
     }
 }
