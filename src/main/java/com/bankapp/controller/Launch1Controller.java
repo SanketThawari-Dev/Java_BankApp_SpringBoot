@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.bankapp.dao.AccountDao;
 import com.bankapp.dao.Transac_his_dao;
@@ -22,7 +22,7 @@ public class Launch1Controller {
     AccountDao acDao = new AccountDao();
     Transac_his_dao tDao = new Transac_his_dao();
 
-    @PostMapping("/signup")
+    @GetMapping("/signup")
     public String signup(HttpServletRequest req) {
 
         HttpSession session = req.getSession();
