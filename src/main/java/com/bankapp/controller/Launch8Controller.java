@@ -12,6 +12,8 @@ public class Launch8Controller {
     public String loginu(HttpServletRequest req) {
 
         req.getSession().removeAttribute("msg");
-        return "redirect:/login.jsp";
+
+        // ✅ redirect to controller, not JSP
+        return "redirect:/login";
     }
 }
