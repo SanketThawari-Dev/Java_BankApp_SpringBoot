@@ -12,6 +12,9 @@ public class Launch10Controller {
     public String accountu(HttpServletRequest req) {
 
         req.getSession().removeAttribute("msg");
-        return "redirect:/account.jsp";
+
+        // ✅ redirect to controller
+        return "redirect:/account";
     }
 }
+
