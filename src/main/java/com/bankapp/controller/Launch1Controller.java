@@ -1,7 +1,6 @@
 package com.bankapp.controller;
 
 import java.sql.Connection;
-
 import javax.sql.DataSource;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -46,16 +45,18 @@ public class Launch1Controller {
 
             if ("inserted".equals(res)) {
                 session.setAttribute("msg", "Account created");
-                return "redirect:/login.jsp";
+
+                // ✅ redirect to controller, not JSP
+                return "redirect:/login";
             } else {
                 session.setAttribute("msg", "Account Creation Failed");
-                return "redirect:/signup.jsp";
+                return "redirect:/signup";
             }
 
         } catch (Exception e) {
             e.printStackTrace();
             session.setAttribute("msg", "Internal server error");
-            return "redirect:/signup.jsp";
+            return "redirect:/signup";
         }
     }
 }
