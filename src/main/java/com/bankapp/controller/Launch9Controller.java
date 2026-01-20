@@ -12,6 +12,8 @@ public class Launch9Controller {
     public String signupu(HttpServletRequest req) {
 
         req.getSession().removeAttribute("msg");
-        return "redirect:/signup.jsp";
+
+        // ✅ redirect to controller
+        return "redirect:/signup";
     }
 }
