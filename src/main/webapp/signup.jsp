@@ -80,7 +80,7 @@
     <button class="btn btn-success d" >SignUp</button> 
 </div>
 <div class="text-center">
-    Already have an Account <a href="login.jsp">login</a>
+    <a href="loginu">login</a>
 </div>
 
 </form>
