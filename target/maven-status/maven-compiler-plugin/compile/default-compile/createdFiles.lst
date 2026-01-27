@@ -5,6 +5,7 @@ com/bank/service/TransactionService.class
 com/bank/controller/UiNavigationController.class
 com/bank/service/AccountService.class
 com/bank/controller/AuthController.class
+com/bank/controller/HomeController.class
 com/bank/repository/TransactionRepository.class
 com/bank/BankingApplication.class
 com/bank/entity/Account.class
