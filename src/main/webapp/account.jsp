@@ -29,8 +29,10 @@ if (check != null) {
 <!-- NAVBAR -->
 <nav class="navbar navbar-custom container">
     <div class="d-flex gap-2">
-        <a class="btn btn-danger" href="logout">Logout</a>
-        <form action="readtxn">
+        <form action="logout" method="post">
+    <button class="btn btn-danger">Logout</button>
+        </form>
+        <form action="readtxn" method="post">
             <input type="hidden" name="uid" value="<%=check %>">
             <button class="btn btn-info">Transaction History</button>
         </form>
@@ -52,7 +54,7 @@ if (check != null) {
             <div class="col-md-4">
                 <div class="service-card">
                     <div class="service-title">Deposit Money</div>
-                    <form action="deposit">
+                    <form action="deposit" method="post">
                         <label>Enter Amount</label>
                         <input type="text" name="am" class="form-control">
                         <input type="hidden" name="uid" value="<%=check%>">
@@ -65,7 +67,7 @@ if (check != null) {
             <div class="col-md-4">
                 <div class="service-card">
                     <div class="service-title">Withdraw Money</div>
-                    <form action="withdraw">
+                    <form action="withdraw" method="post">
                         <label>Enter Amount</label>
                         <input type="text" name="am" class="form-control">
                         <input type="hidden" name="uid" value="<%=check%>">
@@ -78,7 +80,7 @@ if (check != null) {
             <div class="col-md-4">
                 <div class="service-card">
                     <div class="service-title">Transfer Money</div>
-                    <form action="transfer">
+                    <form action="transfer" method="post">
                         <label>Enter Amount</label>
                         <input type="text" name="am" class="form-control">
 
