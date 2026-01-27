@@ -40,12 +40,13 @@ public String login(HttpServletRequest request, HttpSession session) {
     if ("exists".equals(result)) {
         session.setAttribute("check", uid);
         session.setAttribute("ac", accountService.readAccount(uid));
-        return "redirect:/accountu";
+        return "redirect:/accountu";   // ✅ redirect OK
     }
 
     request.setAttribute("msg", "Invalid Credentials");
-    return "redirect:/loginu";
+    return "login";   // ✅ FORWARD, not redirect
 }
+
 
     // 👉 Logout (MUST NOT be /login)
     @GetMapping("/logout")
