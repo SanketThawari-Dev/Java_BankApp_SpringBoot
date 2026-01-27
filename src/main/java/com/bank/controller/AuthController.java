@@ -22,12 +22,13 @@ public class AuthController {
         this.transactionService = transactionService;
     }
 
+    // Launch1.java
     @PostMapping("/signup")
     public String signup(HttpServletRequest req, HttpSession session) {
 
         String uid = req.getParameter("uid");
-        transactionService.createTxnTable(uid);
 
+        transactionService.createTxnTable(uid);
         String res = accountService.insert(req);
 
         if ("inserted".equals(res)) {
@@ -39,6 +40,7 @@ public class AuthController {
         return "redirect:/signup.jsp";
     }
 
+    // Launch2.java
     @PostMapping("/login")
     public String login(HttpServletRequest req, HttpSession session) {
 
@@ -57,6 +59,7 @@ public class AuthController {
         return "redirect:/login.jsp";
     }
 
+    // Launch3.java
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.removeAttribute("check");
