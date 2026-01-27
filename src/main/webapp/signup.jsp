@@ -80,7 +80,7 @@
     <button class="btn btn-success d" >SignUp</button> 
 </div>
 <div class="text-center">
-    <a href="loginu">login</a>
+   Already have an Account <a href="loginu">login</a>
 </div>
 
 </form>
