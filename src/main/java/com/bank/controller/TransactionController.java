@@ -18,13 +18,11 @@ public class TransactionController {
     }
 
     // Launch7.java
-    @GetMapping("/readtxn")
-    public String readTxn(@RequestParam("uid") String uid,
-                          HttpSession session) {
-
-        session.setAttribute("check", uid);
-        session.setAttribute("al", transactionService.readTxn(uid));
-
-        return "redirect:/readtxn.jsp";
-    }
+   @PostMapping("/readtxn")
+public String readTxn(HttpServletRequest request, HttpSession session) {
+    String uid = request.getParameter("uid");
+    session.setAttribute("check", uid);
+    session.setAttribute("al", transactionService.readTxn(uid));
+    return "readtxn";
+}
 }
