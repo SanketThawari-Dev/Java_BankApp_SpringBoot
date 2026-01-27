@@ -29,23 +29,23 @@ public class AuthController {
     }
 
     // 👉 Handle login submit
-    @PostMapping("/login")
-    public String login(HttpServletRequest request, HttpSession session) {
+   @PostMapping("/login")
+public String login(HttpServletRequest request, HttpSession session) {
 
-        String uid = request.getParameter("uid");
-        String upass = request.getParameter("upass");
+    String uid = request.getParameter("uid");
+    String upass = request.getParameter("upass");
 
-        String result = accountService.checkUser(uid, upass);
+    String result = accountService.checkUser(uid, upass);
 
-        if ("exists".equals(result)) {
-            session.setAttribute("check", uid);
-            session.setAttribute("ac", accountService.readAccount(uid));
-            return "redirect:/accountu";
-        }
-
-        request.setAttribute("msg", "Invalid Credentials");
-        return "login";
+    if ("exists".equals(result)) {
+        session.setAttribute("check", uid);
+        session.setAttribute("ac", accountService.readAccount(uid));
+        return "redirect:/accountu";
     }
+
+    request.setAttribute("msg", "Invalid Credentials");
+    return "redirect:/loginu";
+}
 
     // 👉 Logout (MUST NOT be /login)
     @GetMapping("/logout")
