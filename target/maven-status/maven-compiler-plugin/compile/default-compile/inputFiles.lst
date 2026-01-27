@@ -1,0 +1,12 @@
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/service/TransactionService.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/repository/TransactionRepository.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/controller/TransactionController.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/entity/TxnHistory.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/controller/UiNavigationController.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/BankingApplication.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/repository/AccountRepository.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/service/AccountService.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/config/JspConfig.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/controller/AuthController.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/controller/AccountController.java
+/home/ubuntu/Java_BankApp_SpringBoot/src/main/java/com/bank/entity/Account.java

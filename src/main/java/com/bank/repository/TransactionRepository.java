@@ -59,5 +59,16 @@ public class TransactionRepository {
                 }
         );
     }
+
+    public void createTxnTable(String uid) {
+    try {
+        jdbcTemplate.execute(
+            "create table " + uid +
+            "txn(acno varchar(50), amount varchar(50), tStatus varchar(50), date varchar(50), availBal varchar(50))"
+        );
+    } catch (Exception e) {
+        // ignore (same behavior as servlet)
+    }
+}
 }
 
