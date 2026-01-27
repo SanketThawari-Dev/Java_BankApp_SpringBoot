@@ -22,7 +22,7 @@
 <%@include file="msg.jsp" %>
 
 <div class="login-container">
-    <form action="login" method="post" class="login-card">
+    <form action="/login" method="post" class="login-card">
 
         <label for="uid">User ID</label>
         <input type="text" name="uid" id="uid" class="form-control" required>
