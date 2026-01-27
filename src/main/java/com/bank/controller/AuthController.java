@@ -22,29 +22,25 @@ public class AuthController {
         this.transactionService = transactionService;
     }
 
-    // 👉 Open login page
     @GetMapping("/loginu")
-    public String loginPage() {
-        return "login";
-    }
+public String loginPage() {
+    return "login";   // renders login.jsp
+}
 
-    // 👉 Handle login submit
-   @PostMapping("/login")
+@PostMapping("/login")
 public String login(HttpServletRequest request, HttpSession session) {
 
     String uid = request.getParameter("uid");
     String upass = request.getParameter("upass");
 
-    String result = accountService.checkUser(uid, upass);
-
-    if ("exists".equals(result)) {
+    if ("exists".equals(accountService.checkUser(uid, upass))) {
         session.setAttribute("check", uid);
         session.setAttribute("ac", accountService.readAccount(uid));
-        return "redirect:/accountu";   // ✅ redirect OK
+        return "redirect:/accountu";
     }
 
     request.setAttribute("msg", "Invalid Credentials");
-    return "login";   // ✅ FORWARD, not redirect
+    return "login";   // forward, NOT redirect
 }
 
 
